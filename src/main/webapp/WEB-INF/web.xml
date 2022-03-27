@@ -9,7 +9,7 @@
     <filter-name>AWSXRayServletFilter</filter-name>
     <filter-class>com.amazonaws.xray.javax.servlet.AWSXRayServletFilter</filter-class>
     <init-param>
-       <param-name>fixedName</param-name>
+       <param-name>maven-web-application</param-name>
        <param-value>maven-web-application</param-value>
     </init-param>
   </filter> 
