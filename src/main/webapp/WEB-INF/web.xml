@@ -10,6 +10,20 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  
+  <filter>
+    <filter-name>AWSXRayServletFilter</filter-name>
+    <filter-class>com.amazonaws.xray.javax.servlet.AWSXRayServletFilter</filter-class>
+    <init-param>
+       <param-name>fixedName</param-name>
+       <param-value><<CHANGE_THIS_VALUE>></param-value>
+    </init-param>
+  </filter> 
+  <filter-mapping>
+    <filter-name>AWSXRayServletFilter</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping>
+  
   <servlet-mapping>
     <servlet-name>mt</servlet-name>
     <url-pattern>/services/*</url-pattern>
